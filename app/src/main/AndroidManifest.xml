@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smartory">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup"
+        tools:targetApi="m">
+
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="https://712cabcd9561425cb58069eb259619bc@o966499.ingest.sentry.io/5919353" />
+        <meta-data
+            android:name="io.sentry.release"
+            android:value="com.smartory@3.0+1" />
+        <meta-data
+            android:name="io.sentry.sample-rate"
+            android:value="1.0" />
+        <meta-data
+            android:name="io.sentry.session-tracking.enable"
+            android:value="true" />
+        <meta-data
+            android:name="io.sentry.environment"
+            android:value="production" />
+
+        <activity
+            android:name=".views.activities.ConfirmUpdateVersionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".views.activities.LevObsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.CheckListValidationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.PicturePreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.PhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.ListChecksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.FormNewCheckListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.CheckListFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name=".utils.LocationService"
+            android:enabled="true" />
+    </application>
+
+</manifest>

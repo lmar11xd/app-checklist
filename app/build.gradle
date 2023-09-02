@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+def buildCode = "20230712" //new Date().format("yyyyMMdd")
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.smartory"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "${buildCode}"
+        multiDexEnabled = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
+    }
+
+    buildTypes {
+        local{
+            debuggable true
+            buildConfigField 'String', 'API_URL', '"http://'+ InetAddress.getLocalHost().getCanonicalHostName() + ':8080/api/"';
+        }
+        dev{
+            debuggable true
+            buildConfigField 'String', 'API_URL', '"https://unpaperwork.dev.smartory.pe/api/"';
+        }
+        tst{
+            debuggable true
+            buildConfigField 'String', 'API_URL', '"https://unpaperwork.qa.smartory.pe/api/"';
+        }
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'API_URL', '"https://unpaperwork.petroperu.net.pe/api/"';
+            applicationVariants.all{
+                    // this method is use to rename your all apk weather
+                    // it may be signed or unsigned(debug apk)
+                variant ->
+                    variant.outputs.each{
+                            // on below line we are setting
+                            // a name to our apk as GFG.apk
+                        output->
+                            // on below line we are adding version name to
+                            // our .apk file along with the app name
+                            def name = "UP-CHECKLIST_${variant.versionName}.apk"
+                            // on below line we are setting the
+                            // outputFile Name to our apk file
+                            output.outputFileName = name
+                    }
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+
+    //material
+    implementation 'com.google.android.material:material:1.3.0-alpha02'
+
+    //Implement CameraView
+    api 'com.otaliastudios:cameraview:2.6.1'
+
+    //Drawing view
+    implementation 'com.github.golovin47.drawingview:drawingview:1.0.0'
+
+    //Map
+    implementation 'org.osmdroid:osmdroid-android:6.1.0'
+
+    implementation 'io.sentry:sentry-android:5.1.2'
+    implementation 'io.sentry:sentry-android-okhttp:5.1.2'
+
+    //Rx
+    implementation 'io.reactivex.rxjava3:rxjava:2.5.0'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    // location fused in service
+    //implementation 'com.google.android.gms:play-services:11.0.4'
+
+}

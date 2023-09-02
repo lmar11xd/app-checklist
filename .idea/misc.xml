@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/drawable/circle_background.xml" value="0.1712962962962963" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.1984375" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/drawable/ic_baseline_remove_circle_outline_24.xml" value="0.16064814814814815" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/drawable/ic_keyboard_return_black_24dp.xml" value="0.1984375" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/activity_form_new_check_list.xml" value="0.4" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/activity_login.xml" value="0.22592592592592592" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/dialog_check_item.xml" value="0.264" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/dialog_check_lev_item.xml" value="0.22592592592592592" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/dialog_filter.xml" value="0.1287037037037037" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/dialog_photo.xml" value="0.1287037037037037" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/dialog_photo_preview.xml" value="0.13935185185185187" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/dialog_setting_env.xml" value="0.21875" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/fragment_dates_driver.xml" value="0.264" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/grid_layout_item_photo_evidence.xml" value="0.4" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/row_item_checklist.xml" value="0.22592592592592592" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/row_item_lev.xml" value="0.2" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/layout/row_list.xml" value="0.4" />
+        <entry key="..\:/WorkProjects/ChecklistUPWORK-MOBILE-ANDROID/app/src/main/res/menu/menu_global.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/activity_form_new_check_list.xml" value="0.27960666951688756" />
+        <entry key="app/src/main/res/layout/activity_login_new.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_data_general.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_verification_tire.xml" value="0.27960666951688756" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

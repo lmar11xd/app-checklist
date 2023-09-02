@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carv_project"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:id="@+id/boxImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imageEvidence"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:paddingLeft="2dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="2dp"/>
+
+            <TextView
+                android:id="@+id/typePhoto"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_below="@+id/imageEvidence"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <LinearLayout
+                android:id="@+id/option_delete"
+                android:background="@drawable/circle_background"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/deleteImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/option_download"
+                android:background="@drawable/circle_background"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/downloadImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_baseline_cloud_download_24"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/option_zoom"
+                android:background="@drawable/circle_background"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/imageEvidence"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/zoomImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_baseline_zoom_out_map_24"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

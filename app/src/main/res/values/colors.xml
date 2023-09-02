@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c21b17</color>
+    <color name="colorPrimaryDark">#da291c</color>
+    <color name="colorAccent">#c21b17</color>
+
+    <color name="colorAccentBlank">#fff</color>
+    <color name="colorGris">#FF888888</color>
+    <color name="colorGrisClaro">#D5D5D5</color>
+
+    <color name="black">#000</color>
+
+    <color name="found_red">#FAF4F4</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="indicator_1">#8D0A08</color>
+    <color name="indicator_2">#8D0A08</color>
+    <color name="indicator_3">#8D0A08</color>
+    <color name="indicator_4">#08538D</color>
+
+    <color name="found_fragments">#A3A5A8</color>
+    <color name="more_details">#C1C5CA</color>
+    <color name="saudo_black">#221E1E</color>
+
+    <color name="petroperu">#c21b17</color>
+    <color name="petroperu_dark">#5e0508</color>
+</resources>

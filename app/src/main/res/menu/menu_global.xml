@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_version"
+        android:title="Version"
+        app:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        android:title="action_notification"
+        app:showAsAction="always">
+        <menu>
+
+            <item
+                android:id="@+id/action_update"
+                android:orderInCategory="100"
+                android:title="Actualizar datos"
+                android:icon="@drawable/ic_baseline_refresh_24"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_new_version"
+                android:orderInCategory="100"
+                android:title="Descargar última versión"
+                android:icon="@drawable/ic_system_update_black_24dp"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_logout"
+                android:orderInCategory="100"
+                android:title="Cerrar sesión"
+                android:icon="@drawable/ic_keyboard_return_black_24dp"
+                app:showAsAction="never" />
+
+        </menu>
+    </item>
+</menu>

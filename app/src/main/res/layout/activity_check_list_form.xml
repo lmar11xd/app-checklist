@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.activities.CheckListFormActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/labelProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorAccent"
+            android:text="40%"
+            android:visibility="visible"
+            android:textSize="18sp"
+            android:textStyle="bold"></TextView>
+
+        <ProgressBar
+            android:id="@+id/checklistProgressBar"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="30dp"
+            android:progress="40"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:progressBackgroundTint="@color/colorAccent"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"></ProgressBar>
+
+        <LinearLayout
+            android:id="@+id/grupoTodos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:text="Todos:"></TextView>
+            <Button
+                android:id="@+id/todosCumple"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:textSize="10dp"
+                android:text="CUMPLE"></Button>
+            <Button
+                android:id="@+id/todosNoAplica"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textSize="10dp"
+                android:text="NO APLICA"></Button>
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TabLayout"
+            app:tabTextColor="@color/colorPrimaryDark"
+            app:tabIndicatorColor="@color/colorPrimaryDark"
+            app:tabMode="scrollable"
+            />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fltn_btn_validate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:tint="@color/colorAccentBlank"
+        app:srcCompat="@drawable/ic_done_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+</RelativeLayout>
